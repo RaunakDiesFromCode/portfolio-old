@@ -14,30 +14,28 @@ export default function Project() {
       title: "Athena, An E-library",
       tech: [FaJava, BsFiletypeXml, SiFirebase, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Athena",
-      cover: "https://ibb.co/L5TySr4",
+      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
       background: "bg-indigo-500",
     },
-
     {
       title: "Minimal Weather App",
       tech: [FaJava, BsFiletypeXml, TbApi, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Minimalistic-Weather-App",
-      cover: "https://ibb.co/98M2HPL",
+      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
       background: "bg-green-500",
     },
     {
       title: "Athena, An E-library",
       tech: [FaJava, BsFiletypeXml, SiFirebase, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Athena",
-      cover: "https://ibb.co/L5TySr4",
+      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
       background: "bg-indigo-500",
     },
-
     {
       title: "Minimal Weather App",
       tech: [FaJava, BsFiletypeXml, TbApi, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Minimalistic-Weather-App",
-      cover: "https://ibb.co/98M2HPL",
+      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
       background: "bg-green-500",
     },
   ];
