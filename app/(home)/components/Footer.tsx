@@ -53,7 +53,7 @@ export default function Footer({ className }: { className?: string }) {
       </div>
 
       <div className="flex flex-col items-center gap-5 p-10">
-        <div className="flex flex-row items-center gap-5">
+        <div className="flex flex-col items-center gap-5">
           <button className="p-[3px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
             <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">

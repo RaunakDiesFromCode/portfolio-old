@@ -46,7 +46,7 @@ export default function Project() {
         text="Projects 📁"
         className="flex flex-col justify-center items-center rotate-6"
       />
-      <div className="grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 pt-20 gap-10">
+      <div className="grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 pt-20 gap-10 sm:gap-2">
         {projects.map((project, index) => {
           return (
             <Link

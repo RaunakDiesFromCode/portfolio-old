@@ -19,7 +19,7 @@ export default function Navbar({ className }: { className?: string }) {
       menuClasses = [
         "flex",
         "absolute",
-        "bg-indigo-500",
+        "bg-black/50",
         "rounded-l-3xl",
         "p-10",
         "top-28",
@@ -30,8 +30,11 @@ export default function Navbar({ className }: { className?: string }) {
         "flex-col",
         "top-20",
       ];
+
+      document.documentElement.style.overflow = "hidden"; // Disable scrolling on the entire page
     } else {
       menuClasses.push("hidden");
+      document.documentElement.style.overflow = ""; // Enable scrolling on the entire page
     }
 
     return menuClasses.join(" ");
@@ -82,8 +85,10 @@ export default function Navbar({ className }: { className?: string }) {
         Raunak ✌︎︎
       </h1>
 
-      {/* <div className="hidden sm:flex flex-row items-center gap-5 "> */}
-      <div className={`${getMenuClasses()} lg:flex flex-row gap-10`}>
+      <div
+        className={`${getMenuClasses()} lg:flex flex-row gap-10`}
+        style={{ WebkitBackdropFilter: "blur(70px)", height: "100vh" }}
+      >
         {/** navbar buttons */}
         <div className="md:flex-row flex flex-col items-center gap-5">
           <button className="p-[3px] relative">
