@@ -44,7 +44,7 @@ export default function HeroSection() {
         <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10">
           <MovingBorderBtn
             borderRadius="0.5rem"
-            className="hidden md:inline-flex p-3 bg-white dark:bg-slate-800 text-black dark:text-white border-neutral-200 dark:border-slate-800 font-semibold"
+            className="p-3 bg-white dark:bg-slate-800 text-black dark:text-white border-neutral-200 dark:border-slate-800 font-semibold"
           >
             <p>📌 Available for Hire</p>
           </MovingBorderBtn>

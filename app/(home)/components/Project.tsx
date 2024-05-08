@@ -14,28 +14,28 @@ export default function Project() {
       title: "Athena, An E-library",
       tech: [FaJava, BsFiletypeXml, SiFirebase, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Athena",
-      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
+      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
       background: "bg-indigo-500",
     },
     {
       title: "Minimal Weather App",
       tech: [FaJava, BsFiletypeXml, TbApi, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Minimalistic-Weather-App",
-      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
+      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
       background: "bg-green-500",
     },
     {
       title: "Athena, An E-library",
       tech: [FaJava, BsFiletypeXml, SiFirebase, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Athena",
-      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
+      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
       background: "bg-indigo-500",
     },
     {
       title: "Minimal Weather App",
       tech: [FaJava, BsFiletypeXml, TbApi, FaGit],
       link: "https://github.com/RaunakDiesFromCode/Minimalistic-Weather-App",
-      cover: "https://i.ibb.co/xC4GqZ0/project-2.png",
+      cover: "https://i.ibb.co/hfGNscp/project-1.jpg",
       background: "bg-green-500",
     },
   ];
@@ -46,7 +46,7 @@ export default function Project() {
         text="Projects 📁"
         className="flex flex-col justify-center items-center rotate-6"
       />
-      <div className="grid grid-cols-1 sm:grid-cols-3 pt-20 gap-12">
+      <div className="grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 pt-20 gap-10">
         {projects.map((project, index) => {
           return (
             <Link
