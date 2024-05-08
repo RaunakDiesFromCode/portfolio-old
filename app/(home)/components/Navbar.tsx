@@ -27,8 +27,8 @@ export default function Navbar({ className }: { className?: string }) {
         "justify-center",
         "items-center",
         "gap-10",
-        "flex-col",
         "top-20",
+        "flex-col",
       ];
 
       document.documentElement.style.overflow = "hidden"; // Disable scrolling on the entire page
