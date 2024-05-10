@@ -59,7 +59,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-black/50 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
+          <div className="fixed top-0 left-0 w-screen h-full bg-black/70 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
             <div className="flex justify-end">
               <BsX
                 className="h-8 w-8 text-white cursor-pointer"
