@@ -40,27 +40,20 @@ export default function Footer({ className }: { className?: string }) {
   ];
 
   return (
-    <nav
-      className={cn(
-        "py-10 flex flex-col items-center justify-center animate-move-down",
-        className
-      )}
-    >
-      <div className="text-center">
-        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3">
+    <footer className="bg-zinc-50 text-center dark:bg-gray-900 rounded-2xl">
+      <div className="bg-black/5 p-4 text-center text-surface dark:text-white flex flex-col items-center">
+        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3 pb-2">
           Raunak ✌︎︎
         </h1>
-      </div>
 
-      <div className="flex flex-col items-center gap-5 p-10">
-        <div className="flex flex-col items-center gap-5">
-          <button className="p-[3px] relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-            <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-              📌 Available for Hire
-            </div>
-          </button>
+        <button className="p-[3px] relative mt-3">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+          <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+            📌 Available for Hire
+          </div>
+        </button>
 
+        <div className="flex flex-row items-center gap-5 py-3 pt-3">
           {hlinks.map((hlink, index) => (
             <Link
               href={hlink.link}
@@ -70,8 +63,7 @@ export default function Footer({ className }: { className?: string }) {
               rel="noopener noreferrer"
             >
               <button className="p-[3px] relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-                <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="hover:scale-110 transition-all duration-300 ease-in-out">
                   {hlink.name}
                 </div>
               </button>
@@ -79,7 +71,7 @@ export default function Footer({ className }: { className?: string }) {
           ))}
         </div>
 
-        <div className="flex flex-row items-center gap-10 pt-5">
+        <div className="flex flex-row items-center gap-10 pb-4">
           {socials.map((social, index) => {
             const Icon = social.Icon;
 
@@ -97,6 +89,6 @@ export default function Footer({ className }: { className?: string }) {
           })}
         </div>
       </div>
-    </nav>
+    </footer>
   );
 }

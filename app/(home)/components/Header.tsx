@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="w-full h-24 shadow-xl bg-black/70 backdrop-blur-70 p-10 rounded-b-3xl ">
+      <nav className="w-full h-24 p-10 rounded-b-3xl ">
         <div className="flex items-center justify-between h-full px-4">
           {/* Site title */}
           <h1
