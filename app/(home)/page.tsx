@@ -15,7 +15,7 @@ export default function Page() {
     <div className="min-h-screen absolute w-full">
       {/* Fixed Navbar and Header */}
       <div className="fixed top-0 left-0 right-0 z-30 bg-black overflow-hidden">
-        <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-40" />
+        <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-0" />
       </div>
 
       {/* Fixed Navbar */}
@@ -23,12 +23,12 @@ export default function Page() {
         <Header />
       </div>
 
-      <div className="fixed top-0 left-0right-0 z-50">
+      <div className="fixed top-0 left-0right-0 z-40">
         <Socials />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-40">
+      <div className="relative z-30">
         <div className="max-w-7xl mx-auto p-5 mt-40">
           <HeroSection />
         </div>
