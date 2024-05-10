@@ -62,7 +62,7 @@ export default function HeroSection() {
           </div>
           <div className="glow absolute top-[40%] right-1/2 -z-10"></div>
         </div>
-        <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10">
+        <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10 hover:scale-110 transition-all duration-500 ease-in-out">
           <MovingBorderBtn
             borderRadius="0.5rem"
             className="p-3 bg-white dark:bg-slate-800 text-black dark:text-white border-neutral-200 dark:border-slate-800 font-semibold"

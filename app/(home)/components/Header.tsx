@@ -27,13 +27,13 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="w-full h-24 p-10 rounded-b-3xl ">
-        <div className="flex items-center justify-between h-full px-4">
+      <nav className="w-full h-24 p-10 rounded-b-3xl bg-black/50 backdrop-blur-3xl">
+        <div className="flex items-center justify-between h-full px-9">
           {/* Site title */}
           <h1
-            className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform ${
+            className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform shadow-xl ${
               isHovered ? "-rotate-2" : "-rotate-6"
-            } cursor-pointer transition-transform duration-200 ease-in-out hover:-rotate-2`}
+            } cursor-pointer shadow-2xl transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -42,22 +42,30 @@ const Header = () => {
 
           {/* Buttons for large screens */}
           <div className="hidden sm:flex sm:gap-1 md:gap-4">
-            <button className="p-[3px] relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+            <button className="p-[3px] relative hidden md:flex shadow-xl">
+              {" "}
+              {/* Hide on medium screens (md) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg shadow-2xl" />
               <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 📌 Available for Hire
               </div>
             </button>
-            <button className="p-[3px] relative">
+            <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
               <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 Skills
               </div>
             </button>
-            <button className="p-[3px] relative">
+            <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
               <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 Projects
+              </div>
+            </button>
+            <button className="p-[3px] relative shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+              <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                Contact
               </div>
             </button>
           </div>
