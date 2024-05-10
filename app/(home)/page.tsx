@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="min-h-screen absolute w-full">
       {/* Fixed Navbar and Header */}
-      <div className="fixed top-0 left-0 right-0 z-30 bg-black">
+      <div className="fixed top-0 left-0 right-0 z-30 bg-black overflow-hidden">
         <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-40" />
       </div>
 

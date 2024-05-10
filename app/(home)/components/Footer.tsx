@@ -44,7 +44,7 @@ export default function Footer({ className }: { className?: string }) {
   ];
 
   return (
-    <footer className=" text-center bg-black/50 backdrop-blur-3xl rounded-2xl">
+    <footer className=" text-center bg-gray-900 backdrop-blur-3xl rounded-2xl">
       <div className="bg-black/5 p-4 text-center text-surface dark:text-white flex flex-col items-center">
         <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3 pb-2">
           Raunak ✌︎︎

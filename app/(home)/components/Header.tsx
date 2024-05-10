@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="w-full h-24 p-10 rounded-b-3xl bg-black/50 backdrop-blur-3xl">
+      <nav className="w-full h-24 mt-4 p-10 rounded-3xl bg-gray-900 backdrop-blur-3xl">
         <div className="flex items-center justify-between h-full px-9">
           {/* Site title */}
           <h1
@@ -42,29 +42,28 @@ const Header = () => {
 
           {/* Buttons for large screens */}
           <div className="hidden sm:flex sm:gap-1 md:gap-4">
-            <button className="p-[3px] relative hidden md:flex shadow-xl">
-              {" "}
+            <button className="p-[3px] relative hidden md:flex shadow-2xl">
               {/* Hide on medium screens (md) */}
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg shadow-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
               <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 📌 Available for Hire
               </div>
             </button>
             <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 Skills
               </div>
             </button>
             <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparen">
                 Projects
               </div>
             </button>
             <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparen">
                 Contact
               </div>
             </button>
@@ -82,7 +81,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="fixed top-0 left-0 w-screen h-full bg-black/50 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
+          <div className="fixed top-0 left-0 w-screen h-fit pb-14 rounded-b-[10%] bg-gray-900 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
             <div className="flex justify-end">
               <BsX
                 className="h-8 w-8 text-white cursor-pointer"
