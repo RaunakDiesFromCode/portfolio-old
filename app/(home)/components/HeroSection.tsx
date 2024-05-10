@@ -1,9 +1,30 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { MovingBorderBtn } from "../../../components/ui/moving-border";
 import Title from "./Title";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export default function HeroSection() {
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "awesome",
+    },
+    {
+      text: "apps",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Aceternity.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+
   return (
     <div className="min-h-[60vh] flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row justify-between items-center animate-move-up">
       <div className="space-y-7 text-center lg:text-left">
