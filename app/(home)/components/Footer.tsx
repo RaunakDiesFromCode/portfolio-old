@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import { SiGithub, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
@@ -43,54 +44,81 @@ export default function Footer({ className }: { className?: string }) {
     },
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked); // Toggle the click state
+  };
+
   return (
     <footer className=" text-center bg-gray-900 backdrop-blur-3xl rounded-2xl">
       <div className="bg-black/5 p-4 text-center text-surface dark:text-white flex flex-col items-center">
-        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3 pb-2">
-          Raunak ✌︎︎
-        </h1>
+        <div className="flex flex-row justify-between items-center w-full px-20 pt-5">
+          <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 py-2">
+            Raunak ✌︎︎
+          </h1>
 
-        <button className="p-[3px] relative mt-3">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-          <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-            📌 Available for Hire
-          </div>
-        </button>
-
-        <div className="flex flex-row items-center gap-5 py-3 pt-3">
-          {hlinks.map((hlink, index) => (
-            <Link
-              href={hlink.link}
-              key={index}
-              aria-label={hlink.name}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="p-[3px] relative">
-                <div className="hover:scale-110 transition-all duration-300 ease-in-out">
-                  {hlink.name}
-                </div>
-              </button>
-            </Link>
-          ))}
+          <button className="p-[3px] relative mt-3">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+            <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+              📌 Available for Hire
+            </div>
+          </button>
         </div>
 
-        <div className="flex flex-row items-center gap-10 pb-4">
-          {socials.map((social, index) => {
-            const Icon = social.Icon;
+        <div className="flex flex-col justify-between items-center w-full px-20 py-5">
+          <div className="flex flex-row items-center gap-10 item-centre">
+            {socials.map((social, index) => {
+              const Icon = social.Icon;
 
-            return (
+              return (
+                <Link
+                  href={social.link}
+                  key={index}
+                  aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon className="w-6 h-6 hover:scale-125 transition-all duration-300 ease-in-out" />
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="flex flex-row items-center gap-5 item-centre">
+            {hlinks.map((hlink, index) => (
               <Link
-                href={social.link}
+                href={hlink.link}
                 key={index}
-                aria-label={social.label}
+                aria-label={hlink.name}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon className="w-6 h-6 hover:scale-125 transition-all duration-300 ease-in-out" />
+                <button className="p-[3px] relative">
+                  <div className="hover:scale-110 text-xl transition-all duration-300 ease-in-out">
+                    {hlink.name}
+                  </div>
+                </button>
               </Link>
-            );
-          })}
+            ))}
+          </div>
+        </div>
+
+        <div className="p-5 text-white/40 flex flex-row items-center">
+          <div>Made with</div>
+
+          <div
+            className={`text-3xl font-bold transform mx-1 cursor-pointer shadow-xl transition-transform duration-500 ease-in-out hover:scale-150 ${
+              isHovered ? "-rotate-0" : "-rotate-6"
+            } ${isClicked ? "text-red-500" : ""}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={handleClick}
+          >
+            {"♡"}
+          </div>
+          <div>by Raunak</div>
         </div>
       </div>
     </footer>
