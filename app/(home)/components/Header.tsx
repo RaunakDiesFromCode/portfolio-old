@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import { SiGithub, SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
 
@@ -9,6 +9,21 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
+
+  // Effect to toggle body overflow based on menuOpen state
+  useEffect(() => {
+    const body = document.body;
+    if (menuOpen) {
+      body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    // Cleanup function to restore overflow on component unmount
+    return () => {
+      body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <header>
