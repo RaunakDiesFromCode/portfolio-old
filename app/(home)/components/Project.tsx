@@ -57,7 +57,7 @@ export default function Project() {
               <div className={cn("p-5 rounded-md", project.background)}>
                 <DirectionAwareHover
                   imageUrl={project.cover}
-                  className="w-80 space-y-5 cursor-pointer"
+                  className="w-full space-y-5 cursor-pointer"
                 >
                   <div className="space-y-5">
                     <h1 className="text-2xl font-bold">{project.title}</h1>
