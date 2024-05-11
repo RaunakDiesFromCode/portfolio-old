@@ -27,8 +27,8 @@ export default function HeroSection() {
 
   return (
     <div className="animate-move-up">
-      <div className="min-h-[60vh] flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row justify-between items-center ">
-        <div className="space-y-7 text-center lg:text-left pt-6">
+      <div className="min-h-full w-full flex flex-col gap-14 lg:gap-0 justify-centre items-center mb-60 mt-10 xl:mb-72 xl:mt-14 md:mb-72 md:mt-14">
+        <div className="gap-7 text-center  pt-6">
           <h1 className="text-2xl lg:text-4xl font-bold text-white/50 ">
             Hello there 👋
             <br />
@@ -38,7 +38,7 @@ export default function HeroSection() {
             </span>
           </h1>
 
-          <p className="md:w-96 text-1xl lg:text-2xl text-white/80">
+          <p className=" w-full justify-centre items-center text-1xl lg:text-2xl text-white/80 my-4">
             {/* I brew captivating user interfaces on the web and every line of my
           code aims to make the web a less haunting place */}
             I am an android and a front-end web developer from India 🇮🇳
@@ -52,7 +52,7 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <div className="relative w-full sm:pl-96 md:pl-64 xl:pl-96">
+        {/* <div className="relative w-full sm:pl-96 md:pl-64 xl:pl-96">
           <div className="w-72 h-72 space-y-3 -rotate-[30deg] relative">
             <div className="flex gap-3 transform translate-x-8">
               <div className="w-32 h-32 rounded-2xl bg-green-500"></div>
@@ -64,15 +64,15 @@ export default function HeroSection() {
             </div>
             <div className="glow absolute top-[40%] right-1/2 -z-10"></div>
           </div>
-          {/* <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10 hover:scale-110 transition-all duration-500 ease-in-out overflow-x-hidden">
+          <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10 hover:scale-110 transition-all duration-500 ease-in-out overflow-x-hidden">
             <MovingBorderBtn
               borderRadius="0.5rem"
               className="p-3 bg-white dark:bg-slate-800 text-black dark:text-white border-neutral-200 dark:border-slate-800 font-semibold overflow-hidden"
             >
               <p>📌 Available for Hire</p>
             </MovingBorderBtn>
-          </div> */}
-        </div>
+          </div> 
+        </div>*/}
       </div>
 
       <div className="min-h-[60vh] flex flex-col-reverse gap-14 pt-7 lg:gap-0 lg:flex-row justify-between items-center">
