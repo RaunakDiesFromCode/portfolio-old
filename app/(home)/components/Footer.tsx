@@ -68,7 +68,7 @@ export default function Footer({ className }: { className?: string }) {
         </div>
 
         <div className="flex flex-col justify-between items-center w-full px-20 py-5">
-          <div className="flex flex-row items-center gap-10 item-centre">
+          <div className="flex flex-row items-center gap-10 item-centre mb-5">
             {socials.map((social, index) => {
               const Icon = social.Icon;
 

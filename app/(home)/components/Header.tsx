@@ -27,13 +27,13 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="w-full h-24 mt-4 p-10 rounded-3xl bg-gray-900 backdrop-blur-3xl">
-        <div className="flex items-center justify-between h-full px-9">
+      <nav className="">
+        <div className="flex items-center justify-between px-9 w-full h-24 mt-4 p-10 rounded-3xl bg-gray-900 backdrop-blur-3xl">
           {/* Site title */}
           <h1
-            className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform shadow-xl ${
+            className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform ${
               isHovered ? "-rotate-2" : "-rotate-6"
-            } cursor-pointer shadow-2xl transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
+            } cursor-pointer transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -72,7 +72,7 @@ const Header = () => {
           {/* Mobile menu toggle */}
           <div className="sm:hidden cursor-pointer" onClick={toggleMenu}>
             {menuOpen ? (
-              <BsX className="h-8 w-8 text-white hidden" />
+              <BsX className="h-8 w-8 text-white" />
             ) : (
               <BsList className="h-8 w-8 text-white" />
             )}
@@ -81,13 +81,14 @@ const Header = () => {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="fixed top-0 left-0 w-screen h-fit pb-14 rounded-b-[10%] bg-gray-900 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
-            <div className="flex justify-end">
+          // <div className="fixed w-full h-fit pb-14 rounded-b-[10%] bg-gray-900 px-20 py-8 ease-in-out duration-500 backdrop-blur-2xl overflow-hidden">
+          <div className="flex items-center justify-center px-9 w-full h-fit mt-4 p-10 rounded-3xl bg-gray-900 backdrop-blur-3xl">
+            {/* <div className="flex justify-end">
               <BsX
                 className="h-8 w-8 text-white cursor-pointer"
                 onClick={toggleMenu}
               />
-            </div>
+            </div> */}
             <div className="flex flex-col py-4 gap-3 items-center">
               {/* Mobile navigation items */}
               <button className="p-[3px] relative w-full">
