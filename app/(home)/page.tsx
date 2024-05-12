@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
@@ -36,6 +35,7 @@ export default function Page() {
           <div className="mt-20">
             <Project />
           </div>
+          
           <div className="mt-20">
             <Footer />
           </div>

@@ -54,12 +54,12 @@ export default function Footer({ className }: { className?: string }) {
   return (
     <footer className=" text-center bg-gray-900 backdrop-blur-3xl rounded-2xl">
       <div className="bg-black/5 p-4 text-center text-surface dark:text-white flex flex-col items-center">
-        <div className="flex flex-row justify-between items-center w-full px-20 pt-5">
+        <div className="flex flex-col justify-between gap-5 items-center w-full px-20 pt-5 md:flex-row">
           <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 py-2">
             Raunak ✌︎︎
           </h1>
 
-          <button className="p-[3px] relative mt-3">
+          <button className="p-[3px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
             <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
               📌 Available for Hire
@@ -67,8 +67,8 @@ export default function Footer({ className }: { className?: string }) {
           </button>
         </div>
 
-        <div className="flex flex-col justify-between items-center w-full px-20 py-5">
-          <div className="flex flex-row items-center gap-10 item-centre mb-5">
+        <div className="flex flex-col justify-between items-center w-full px-20 py-5 md:flex-row">
+          <div className="flex flex-row items-center gap-10 item-centre mb-5 md:mb-0">
             {socials.map((social, index) => {
               const Icon = social.Icon;
 

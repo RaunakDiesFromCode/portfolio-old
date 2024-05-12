@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { MovingBorderBtn } from "../../../components/ui/moving-border";
+import Image from "next/image";
+// import { MovingBorderBtn } from "../../../components/ui/moving-border";
 import Title from "./Title";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-
+// import Video from "./Video1";
+// import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 export default function HeroSection() {
   const words = [
     {
@@ -76,7 +77,14 @@ export default function HeroSection() {
       </div>
 
       <div className="min-h-[60vh] flex flex-col-reverse gap-14 pt-7 lg:gap-0 lg:flex-row justify-between items-center">
-        <div></div>
+        <div className=" text-white flex items-center justify-center">
+          <Image
+            src="https://i.ibb.co/ZmdWrfb/img2.png" // Replace this with your image path
+            alt="Failed to load"
+            width={450} // Width of the image
+            height={450} // Height of the image
+          />
+        </div>
         <div>
           <h1 className="text-xl lg:text-3xl font-bold text-white/50 ">
             I write android apps
@@ -103,6 +111,7 @@ export default function HeroSection() {
             <span className="text-4xl lg:text-6xl underline underline-offset-8 decoration-green-500 text-white">
               me.
             </span>
+            
           </h1>
           <p className=" md:w-[20em] text-1xl lg:text-2xl py-5 text-white/80">
             {
@@ -110,7 +119,14 @@ export default function HeroSection() {
             }
           </p>
         </div>
-        <div></div>
+        <div className=" text-white flex items-center justify-center">
+          <Image
+            src="https://i.ibb.co/C003yV5/img3.png" // Replace this with your image path
+            alt="Failed to load"
+            width={400} // Width of the image
+            height={400} // Height of the image
+          />
+        </div>
       </div>
     </div>
   );
