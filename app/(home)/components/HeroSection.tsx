@@ -33,13 +33,13 @@ export default function HeroSection() {
           <h1 className="text-2xl lg:text-4xl font-bold text-white/50 ">
             Hello there 👋
             <br />
-            <span className="text-5xl lg:text-8xl text-white">I am </span>
-            <span className="text-5xl lg:text-8xl underline underline-offset-8 decoration-green-500  text-white">
-              Raunak.
-            </span>
+            <div className="bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">
+              <span className="text-5xl lg:text-9xl">I am Raunak.
+              </span>
+            </div>
           </h1>
 
-          <p className=" w-full justify-centre items-center text-1xl lg:text-2xl text-white/80 my-4">
+          <p className=" w-full justify-centre items-center text-1xl lg:text-xl text-white/80 my-4">
             {/* I brew captivating user interfaces on the web and every line of my
           code aims to make the web a less haunting place */}
             I am an android and a front-end web developer from India 🇮🇳
@@ -89,9 +89,7 @@ export default function HeroSection() {
           <h1 className="text-xl lg:text-3xl font-bold text-white/50 ">
             I write android apps
             <br />
-            <span className="text-4xl lg:text-6xl text-white">That </span>
-            <span className="text-4xl lg:text-6xl underline underline-offset-8 decoration-green-500 text-white">
-              boldly speaks.
+            <span className="text-4xl lg:text-6xl bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">That boldly speaks.
             </span>
           </h1>
           <p className=" md:w-[20em] text-1xl lg:text-2xl py-5 text-white/80">
@@ -107,11 +105,9 @@ export default function HeroSection() {
           <h1 className="text-xl lg:text-3xl font-bold text-white/50 ">
             The websites I design
             <br />
-            <span className="text-4xl lg:text-6xl text-white">Reflects </span>
-            <span className="text-4xl lg:text-6xl underline underline-offset-8 decoration-green-500 text-white">
-              me.
+            <span className="text-4xl lg:text-6xl text-white bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">Reflects me.
             </span>
-            
+
           </h1>
           <p className=" md:w-[20em] text-1xl lg:text-2xl py-5 text-white/80">
             {

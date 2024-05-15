@@ -74,9 +74,9 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <nav
       className={cn("relative flex items-center justify-between", className)}
-    >
+    >i
       {!isOpen && (
-        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3">
+        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 -rotate-3 cursor-default">
           Raunak ✌︎︎
         </h1>
       )}
