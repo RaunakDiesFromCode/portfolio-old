@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Navbar from "./Navbar";
 import Link from "next/link";
 import { SiGithub, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
 import { cn } from "@/lib/utils";

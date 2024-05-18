@@ -33,8 +33,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/(home)/components/Lottie.tsx",
-    "components/Cursor.js"
+    "app/components/Lottie.tsx",
+    "components/Cursor.js",
+    "components/ui/starfield-animation.js"
   ],
   "exclude": [
     "node_modules"

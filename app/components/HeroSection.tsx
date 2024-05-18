@@ -33,8 +33,9 @@ export default function HeroSection() {
           <h1 className="text-2xl lg:text-4xl font-bold text-white/50 ">
             Hello there 👋
             <br />
-            <div className="bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">
-              <span className="text-5xl lg:text-9xl">I am Raunak.
+            <div className="bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text drop-shadow-2xl  text-shadow-custom">
+              {/* <span className="text-5xl lg:text-9xl" >I am Raunak. */}
+              <span className="text-5xl lg:text-9xl z-50" >I am Raunak.
               </span>
             </div>
           </h1>

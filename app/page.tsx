@@ -7,23 +7,20 @@ import Project from "./components/Project";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import Socials from "./components/Socials";
 
 export default function Page() {
   return (
-    <div className="min-h-screen absolute w-full scroll-smooth">
+    <div className="min-h-screen absolute w-full scroll-smooth bg-black">
       {/* Fixed Navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50 px-5">
+      {/* <div className="fixed top-0 left-0 right-0 z-50 px-5">
         <Header />
-      </div>
+      </div> */}
       {/* Fixed Navbar and Header */}
-      <div className="fixed top-0 left-0 right-0 z-30  overflow-hidden xl:w-[100%] sm:w-[80%]">
+      <div className="fixed top-0 left-0 right-0 z-30  overflow-hidden xl:w-[100%] sm:w-[80%] ">
         <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-0 overflow-hidden" />
       </div>
 
-      <div className="fixed top-0 left-0right-0 z-40">
-        <Socials />
-      </div>
+      
 
       {/* Main Content */}
       <div className="relative z-30">
@@ -35,8 +32,8 @@ export default function Page() {
           <div className="mt-20">
             <Project />
           </div>
-          
-          <div className="mt-20">
+
+          <div className="mt-20 mx-9">
             <Footer />
           </div>
         </div>

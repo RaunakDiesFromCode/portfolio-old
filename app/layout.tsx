@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 // import CustomCursor from "@/components/Cursor";
 import AnimatedCursor from "react-animated-cursor"
+import Header from "./components/Header";
+import Socials from "./components/Socials";
 
 const spaceGrotesque = Space_Grotesk({ subsets: ["latin"] });
 
@@ -37,13 +39,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={spaceGrotesque.className}>
+
+
+        <div className="fixed top-0 left-0 right-0 z-50 px-5">
+          <Header />
+        </div>
+
+        <div className="fixed top-0 left-0right-0 z-40">
+          <Socials />
+        </div>
+
         <AnimatedCursor
           innerSize={10}
           outerSize={40}
           color='0, 0, 0, 0'
           outerAlpha={0.3}
           innerScale={2}
-          outerScale={2}
+          outerScale={1}
           trailingSpeed={10}
           innerStyle={{
             backgroundColor: 'rgb(0, 255, 255)'

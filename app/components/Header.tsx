@@ -1,3 +1,5 @@
+"use client"
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import { SiGithub, SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
@@ -30,16 +32,17 @@ const Header = () => {
       <nav className="">
         <div className="flex items-center justify-between px-9 w-full h-24 mt-4 p-10 rounded-3xl bg-gray-900 backdrop-blur-3xl">
           {/* Site title */}
-          <h1
-            className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform ${
-              isHovered ? "-rotate-2" : "-rotate-6"
-            } cursor-pointer transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Raunak ✌︎︎
-          </h1>
-
+          <Link href="/">
+            <h1
+              className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform ${isHovered ? "-rotate-2" : "-rotate-6"
+                } cursor-pointer transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Raunak ✌︎︎
+            </h1>
+          </Link>
+            
           {/* Buttons for large screens */}
           <div className="hidden sm:flex sm:gap-1 md:gap-4">
             <button className="p-[3px] relative hidden md:flex shadow-2xl">
@@ -49,24 +52,30 @@ const Header = () => {
                 📌 Available for Hire
               </div>
             </button>
+            <Link href="skills">
+              <button className="p-[3px] relative shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+                <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                  Skills
+                </div>
+              </button>
+            </Link>
+            <Link href="projects">
             <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
               <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                Skills
-              </div>
-            </button>
-            <button className="p-[3px] relative shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparen">
                 Projects
               </div>
-            </button>
+              </button>
+            </Link>
+            <Link href="contact">
             <button className="p-[3px] relative shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparen">
+              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 Contact
               </div>
-            </button>
+              </button>
+            </Link>
           </div>
 
           {/* Mobile menu toggle */}

@@ -2,12 +2,12 @@ import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss"
 
 const svgToDataUri = require("mini-svg-data-uri");
- 
+
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
- 
+
 
 const config = {
   darkMode: ["class"],
@@ -16,7 +16,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -27,6 +27,9 @@ const config = {
       },
     },
     extend: {
+      textShadow: {
+        'custom': '0px 0px 55px rgba(255,234,0,0.58)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,7 +71,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-         moveHorizontal: {
+        moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
           },
@@ -79,7 +82,7 @@ const config = {
             transform: "translateX(-50%) translateY(-10%)",
           },
         },
-         moveInCircle: {
+        moveInCircle: {
           "0%": {
             transform: "rotate(0deg)",
           },
@@ -90,7 +93,7 @@ const config = {
             transform: "rotate(360deg)",
           },
         },
-         moveVertical: {
+        moveVertical: {
           "0%": {
             transform: "translateY(-50%)",
           },
@@ -143,29 +146,37 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors,
-    function ({ matchUtilities, theme }: any) {
-      matchUtilities(
-        {
-          "bg-grid": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-            )}")`,
-          }),
-          "bg-grid-small": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-            )}")`,
-          }),
-          "bg-dot": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
-            )}")`,
-          }),
+  plugins: [require("tailwindcss-animate"), addVariablesForColors, require('daisyui'), require('tailwindcss-textshadow'),
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.text-shadow-custom': {
+          textShadow: '0px 0px 55px rgba(0,0,0,0.20)',
         },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-      );
-    },],
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  function ({ matchUtilities, theme }: any) {
+    matchUtilities(
+      {
+        "bg-grid": (value: any) => ({
+          backgroundImage: `url("${svgToDataUri(
+            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+          )}")`,
+        }),
+        "bg-grid-small": (value: any) => ({
+          backgroundImage: `url("${svgToDataUri(
+            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+          )}")`,
+        }),
+        "bg-dot": (value: any) => ({
+          backgroundImage: `url("${svgToDataUri(
+            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+          )}")`,
+        }),
+      },
+      { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+    );
+  },],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -173,7 +184,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
