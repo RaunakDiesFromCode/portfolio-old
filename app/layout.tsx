@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 // import CustomCursor from "@/components/Cursor";
 import AnimatedCursor from "react-animated-cursor"
 import Header from "./components/Header";
 import Socials from "./components/Socials";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
-const spaceGrotesque = Space_Grotesk({ subsets: ["latin"] });
+const spaceGrotesque = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
@@ -40,12 +41,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={spaceGrotesque.className}>
 
-
-        <div className="fixed top-0 left-0 right-0 z-50 px-5">
-          <Header />
+        <div className="fixed top-0 left-0 right-0 z-30  overflow-hidden xl:w-[100%] sm:w-[80%] ">
+          <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-0 overflow-hidden" />
         </div>
 
-        <div className="fixed top-0 left-0right-0 z-40">
+
+        <div className="fixed top-0 left-0 right-0 z-50 px-5">
+          <Header/>
+        </div>
+
+        <div className="fixed top-0 left-0right-0 z-40 ">
           <Socials />
         </div>
 

@@ -16,10 +16,8 @@ export default async function Page() {
                 <div className="max-w-7xl mx-auto p-5 pt-40">
                     <PageHeroSection text='Skills'/>
                 </div>
-                <div className="max-w-7xl mx-auto p-5 mt-20">
-                    <div className="mt-20">
-                        <Footer />
-                    </div>
+                <div className="mt-20 z-30 px-5 pb-9">
+                    <Footer />
                 </div>
             </div>
         </div>

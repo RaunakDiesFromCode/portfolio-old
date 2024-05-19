@@ -6,6 +6,8 @@ import Image from "next/image";
 import Title from "./Title";
 // import Video from "./Video1";
 // import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+
+
 export default function HeroSection() {
   const words = [
     {
@@ -29,8 +31,9 @@ export default function HeroSection() {
   return (
     <div className="animate-move-up">
       <div className="min-h-full w-full flex flex-col gap-14 lg:gap-0 justify-centre items-center mb-60 mt-10 xl:mb-72 xl:mt-14 md:mb-72 md:mt-14">
-        <div className="gap-7 text-center  pt-6">
-          <h1 className="text-2xl lg:text-4xl font-bold text-white/50 ">
+        <div className="gap-7 text-center  pt-6  bg-black/50 backdrop:blur-xl rounded-xl shadow-2xl shadow-black p-9">
+          <h1 className="text-2xl lg:text-4xl font-bold text-white/50">
+            {/* <h1 className="text-2xl lg:text-4xl font-bold text-white/50 bg-white rounded-lg px-9"> */}
             Hello there 👋
             <br />
             <div className="bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text drop-shadow-2xl  text-shadow-custom">
@@ -90,7 +93,7 @@ export default function HeroSection() {
           <h1 className="text-xl lg:text-3xl font-bold text-white/50 ">
             I write android apps
             <br />
-            <span className="text-4xl lg:text-6xl bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">That boldly speaks.
+            <span className="text-4xl lg:text-6xl bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text py-2">That boldly speaks.
             </span>
           </h1>
           <p className=" md:w-[20em] text-1xl lg:text-2xl py-5 text-white/80">
@@ -106,7 +109,8 @@ export default function HeroSection() {
           <h1 className="text-xl lg:text-3xl font-bold text-white/50 ">
             The websites I design
             <br />
-            <span className="text-4xl lg:text-6xl text-white bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text">Reflects me.
+            <span className="text-4xl lg:text-6xl bg-gradient-to-r from-green-500 via-blue-600 to-violet-500 inline-block text-transparent bg-clip-text py-2">
+              Reflects me.
             </span>
 
           </h1>

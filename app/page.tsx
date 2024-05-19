@@ -5,8 +5,6 @@ import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Page() {
   return (
@@ -16,11 +14,9 @@ export default function Page() {
         <Header />
       </div> */}
       {/* Fixed Navbar and Header */}
-      <div className="fixed top-0 left-0 right-0 z-30  overflow-hidden xl:w-[100%] sm:w-[80%] ">
-        <BackgroundGradientAnimation className="sticky top-0 left-0 right-0 z-0 overflow-hidden" />
-      </div>
 
-      
+
+
 
       {/* Main Content */}
       <div className="relative z-30">
@@ -32,10 +28,10 @@ export default function Page() {
           <div className="mt-20">
             <Project />
           </div>
+        </div>
 
-          <div className="mt-20 mx-9">
-            <Footer />
-          </div>
+        <div className="mt-20 z-30 px-5 pb-9">
+          <Footer />
         </div>
       </div>
     </div>

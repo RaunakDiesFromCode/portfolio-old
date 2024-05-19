@@ -50,9 +50,10 @@ export default function Footer({ className }: { className?: string }) {
     setIsClicked(!isClicked); // Toggle the click state
   };
 
+
   return (
-    <footer className=" text-center bg-gray-900 backdrop-blur-3xl rounded-2xl">
-      <div className="bg-black/5 p-4 text-center text-surface dark:text-white flex flex-col items-center">
+    <footer className=" bg-gray-900 backdrop-blur-3xl rounded-2xl shadow-xl shadow-black/50">
+      <div className="bg-black/5 p-4 text-center dark:text-white flex flex-col items-center">
         <div className="flex flex-col justify-between gap-5 items-center w-full px-20 pt-5 md:flex-row">
           <h1 className="text-3xl font-bold underline underline-offset-8 decoration-green-500 py-2">
             Raunak ✌︎︎
