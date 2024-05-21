@@ -32,7 +32,7 @@ export default function HeroSection() {
     <div className="animate-move-up">
       <div className="min-h-full w-full flex flex-col gap-14 lg:gap-0 justify-centre items-center mb-60 mt-10 xl:mb-72 xl:mt-14 md:mb-72 md:mt-14">
         <div className="gap-7 text-center  pt-6  bg-black/50 backdrop:blur-xl rounded-xl shadow-2xl shadow-black p-9">
-          <h1 className="text-2xl lg:text-4xl font-bold text-white/50">
+          <h1 className="text-xl lg:text-4xl font-bold text-white/50">
             {/* <h1 className="text-2xl lg:text-4xl font-bold text-white/50 bg-white rounded-lg px-9"> */}
             Hello there 👋
             <br />
@@ -43,7 +43,7 @@ export default function HeroSection() {
             </div>
           </h1>
 
-          <p className=" w-full justify-centre items-center text-1xl lg:text-xl text-white/80 my-4">
+          <p className=" w-full justify-centre items-center text-1xl lg:text-xl text-white/60 my-4">
             {/* I brew captivating user interfaces on the web and every line of my
           code aims to make the web a less haunting place */}
             I am an android and a front-end web developer from India 🇮🇳
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
           <Link
             href={"mailto:raunakmanna43@gmail.com"}
-            className="inline-block group"
+            className="inline-block group mt-7"
           >
             <Title text="Get in touch 📬" />
           </Link>

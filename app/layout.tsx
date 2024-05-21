@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Inter_Tight
+  
+ } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 // import CustomCursor from "@/components/Cursor";
@@ -8,7 +10,8 @@ import Header from "./components/Header";
 import Socials from "./components/Socials";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
-const spaceGrotesque = Inter_Tight({ subsets: ["latin"] });
+const spaceGrotesque = Inter_Tight
+({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),

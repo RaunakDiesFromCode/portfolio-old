@@ -35,23 +35,25 @@ const Header = () => {
           <Link href="/">
             <h1
               className={`text-3xl font-bold underline underline-offset-8 decoration-green-500 transform ${isHovered ? "-rotate-2" : "-rotate-6"
-                } cursor-pointer transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
+                } transition-transform duration-200 ease-in-out hover:-rotate-2 hover:scale-110`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               Raunak ✌︎︎
             </h1>
           </Link>
-            
+
           {/* Buttons for large screens */}
           <div className="hidden sm:flex sm:gap-1 md:gap-4">
-            <button className="p-[3px] relative hidden md:flex shadow-2xl">
-              {/* Hide on medium screens (md) */}
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                📌 Available for Hire
-              </div>
-            </button>
+            <Link href="contact">
+              <button className="p-[3px] relative hidden md:flex shadow-2xl">
+                {/* Hide on medium screens (md) */}
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+                <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                  📌 Available for Hire
+                </div>
+              </button>
+            </Link>
             <Link href="skills">
               <button className="p-[3px] relative shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
@@ -61,25 +63,25 @@ const Header = () => {
               </button>
             </Link>
             <Link href="projects">
-            <button className="p-[3px] relative shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                Projects
-              </div>
+              <button className="p-[3px] relative shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+                <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                  Projects
+                </div>
               </button>
             </Link>
             <Link href="contact">
-            <button className="p-[3px] relative shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
-              <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                Contact
-              </div>
+              <button className="p-[3px] relative shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+                <div className="px-3 py-2 h-full flex items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                  Contact
+                </div>
               </button>
             </Link>
           </div>
 
           {/* Mobile menu toggle */}
-          <div className="sm:hidden cursor-pointer" onClick={toggleMenu}>
+          <div className="sm:hidden" onClick={toggleMenu}>
             {menuOpen ? (
               <BsX className="h-8 w-8 text-white" />
             ) : (
@@ -100,26 +102,40 @@ const Header = () => {
             </div> */}
             <div className="flex flex-col py-4 gap-3 items-center">
               {/* Mobile navigation items */}
+              <Link href="contact">
               <button className="p-[3px] relative w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
                 <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                   📌 Available for Hire
                 </div>
               </button>
+              </Link>
+              <Link href="skills">
               <button className="p-[3px] relative w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
                 <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                   Skills
                 </div>
-              </button>
+                </button>
+              </Link>
+              <Link href="projects">
               <button className="p-[3px] relative w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
                 <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                   Projects
                 </div>
-              </button>
+                </button>
+              </Link>
+              <Link href="contact">
+                <button className="p-[3px] relative w-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg" />
+                  <div className="px-3 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                    Contact
+                  </div>
+                </button>
+              </Link>
 
-              <h1 className="text-3xl my-5 font-bold underline underline-offset-8 decoration-green-500 -rotate-3 cursor-pointer">
+              <h1 className="text-3xl my-5 font-bold underline underline-offset-8 decoration-green-500 -rotate-3">
                 Raunak ✌︎︎
               </h1>
 
