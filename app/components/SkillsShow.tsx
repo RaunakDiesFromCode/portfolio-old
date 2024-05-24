@@ -10,7 +10,7 @@ export default function skills() {
         <div className=" flex justify-center items-center flex-col mt-20">
             <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mt-9">
 
-                With me, you'll have no problems in <br />
+                With me, you&apos;ll have no problems in <br />
                 <div className=" p-4 text-7xl flex justify-center">
                     <FlipWords words={words} /></div>
             </div>
