@@ -15,15 +15,16 @@ const socialsIcons = [
         link: "https://www.linkedin.com/in/raunak-manna-922a922b8/",
     },
     {
-        label: "Instagram",
-        Icon: SiInstagram,
-        link: "https://www.instagram.com/raunakisannoying/",
-    },
-    {
         label: "Twitter",
         Icon: SiX,
         link: "https://twitter.com/RaunakM298742",
     },
+    {
+        label: "Instagram",
+        Icon: SiInstagram,
+        link: "https://www.instagram.com/raunakisannoying/",
+    },
+    
 ];
 
 
