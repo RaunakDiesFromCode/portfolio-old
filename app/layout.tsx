@@ -7,7 +7,6 @@ import { ThemeProvider } from "next-themes";
 // import CustomCursor from "@/components/Cursor";
 import AnimatedCursor from "react-animated-cursor"
 import Header from "./components/Header";
-import Socials from "./components/Socials";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const spaceGrotesque = Inter_Tight
@@ -53,9 +52,9 @@ export default function RootLayout({
           <Header/>
         </div>
 
-        <div className="fixed top-0 left-0right-0 z-40 ">
+        {/* <div className="fixed top-0 left-0right-0 z-40 ">
           <Socials />
-        </div>
+        </div> */}
 
         <AnimatedCursor
           innerSize={10}

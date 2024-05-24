@@ -5,7 +5,7 @@
  */
 const nextConfig = {
     images: {
-        domains: ['i.ibb.co', 'aceternity.com'],
+        domains: ['i.ibb.co', 'aceternity.com', 'images.unsplash.com'],
     },
 }
 

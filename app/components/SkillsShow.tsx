@@ -7,7 +7,7 @@ const words = ["UI", "UX", "Andorid Dev", "Python", "Java", "NextJS", "Firebase"
 
 export default function skills() {
     return (
-        <div className=" flex justify-center items-center flex-col">
+        <div className=" flex justify-center items-center flex-col mt-20">
             <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mt-9">
 
                 With me, you'll have no problems in <br />
