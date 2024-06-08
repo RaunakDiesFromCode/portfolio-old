@@ -31,7 +31,7 @@ const socialsIcons = [
 export function ContactView() {
     return (
         <>
-            <div className="flex flow-row width-screen justify-center mb-44 my-14">
+            <div className="flex flow-row justify-center mb-44 my-14">
                 {socialsIcons.map((social, index) => {
                     const Icon = social.Icon;
                     return (
@@ -43,7 +43,7 @@ export function ContactView() {
                             rel="noopener noreferrer"
                             className="hover:scale-125 transition-all duration-300 ease-in-out flex flex-col items-center">
 
-                            <Icon className="w-20 h-20 transition-all duration-300 ease-in-out mx-6"
+                            <Icon className="md:w-20 md:h-20 transition-all duration-300 ease-in-out mx-6 h-[35px] w-[35px]"
                                 style={{
                                     transform: 'rotate(0deg)',
                                     transition: 'transform 0.3s ease-in-out'

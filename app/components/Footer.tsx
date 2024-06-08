@@ -54,7 +54,7 @@ export default function Footer({ className }: { className?: string }) {
   return (
     <footer className=" bg-gray-900 backdrop-blur-3xl rounded-2xl shadow-xl shadow-black/50">
       <div className="bg-black/5 p-4 text-center dark:text-white flex flex-col items-center">
-        <div className="flex flex-col justify-between gap-5 items-center w-full px-20 pt-5 md:flex-row">
+        <div className="flex flex-col justify-between gap-5 items-center w-screen md:px-28 pt-5 md:flex-row">
           <h1 className="text-2xl font-bold underline underline-offset-8 decoration-green-500 py-2">
             Raunak ✌︎︎
           </h1>

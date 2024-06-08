@@ -7,14 +7,13 @@ const words = ["UI", "UX", "Andorid Dev", "Python", "Java", "NextJS", "Firebase"
 
 export default function skills() {
     return (
-        <div className=" flex justify-center items-center flex-col mt-20">
-            <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mt-9">
-
+        <div className=" flex justify-center items-center flex-col mt-20 overflow-hidden">
+            <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mt-9 justify-center text-center items-center">
                 With me, you&apos;ll have no problems in <br />
                 <div className=" p-4 text-7xl flex justify-center">
                     <FlipWords words={words} /></div>
             </div>
-            <div className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+            <div className="md:h-[20rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden h-[20rem]">
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="right"

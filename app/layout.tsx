@@ -56,6 +56,8 @@ export default function RootLayout({
           <Socials />
         </div> */}
 
+        <div className="md:block hidden">
+
         <AnimatedCursor
           innerSize={10}
           outerSize={40}
@@ -71,7 +73,9 @@ export default function RootLayout({
             // mixBlendMode: 'exclusion',
             border: '3px solid rgb(0, 255, 255)'
           }}
-        />
+          />
+          </div>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
